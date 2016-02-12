@@ -17,5 +17,17 @@
 		return $app['twig']->render('home.html.twig');
 	});
 
+	$app->get('/album_list', function(){
+		$frankocean = new Albums("Frank Ocean", "Channel Orange");
+		$franksinatra = new Albums("Frank Sinatra", "My Way");
+		$arethafranklin = new Albums("Aretha Franklin", "Lady Soul");
+
+		$albums = array($frankocean, $franksinatra, $arethafranklin);
+		$albums_matching_search = array();
+		foreach ($albums as $album) {
+			
+		}
+	});
+
 	return $app;
 ?>
